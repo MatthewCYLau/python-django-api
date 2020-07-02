@@ -24,6 +24,12 @@ docker-compose run app sh -c "python manage.py createsuperuser" # follow instruc
 
 ## Usage
 
+- To run tests, run the following command:
+
+```bash
+docker-compose run app sh -c "python manage.py test && flake8"
+```
+
 - To create a new user, once the app is running visit `http://localhost:8000/api/user/create/`
 
 ## Contributing
