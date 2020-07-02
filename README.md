@@ -32,7 +32,9 @@ docker-compose run app sh -c "python manage.py test && flake8"
 
 - To create a new user, once the app is running visit `http://localhost:8000/api/user/create/`
 
-- To retrieve user info with auth token, set Authorization header as `Token <auth token>` and make a GET request to `http://localhost:8000/api/user/token/`
+- To get an auth token, make a POST request to `http://localhost:8000/api/user/token/` with valid user credentials
+
+- To retrieve user info with valid auth token, set Authorization header as `Token <auth token>` and make a GET request to `http://localhost:8000/api/user/me/`
 
 ## Contributing
 
