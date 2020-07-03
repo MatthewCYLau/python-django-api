@@ -36,6 +36,16 @@ docker-compose run app sh -c "python manage.py test && flake8"
 
 - To retrieve user info with valid auth token, set Authorization header as `Token <auth token>` and make a GET request to `http://localhost:8000/api/user/me/`
 
+- To get all ingredients, set Authorization header as `Token <auth token>` and make a GET request to `http://localhost:8000/api/recipe/ingredients/`
+
+- To add an ingredient, set Authorization header as `Token <auth token>` and make a POST request to `http://localhost:8000/api/recipe/ingredients/` with the following body:
+
+```
+{
+    "name": "<ingredient name>"
+}
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
